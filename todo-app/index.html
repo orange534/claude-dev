@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TODOアプリ</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="container">
+    <h1>TODOアプリ</h1>
+
+    <!-- 入力フォーム -->
+    <form id="todo-form">
+      <input type="text" id="todo-input" placeholder="やることを入力" required>
+      <button type="submit">追加</button>
+    </form>
+
+    <!-- 絞り込みボタン -->
+    <div class="filters">
+      <button type="button" data-filter="all" class="active">すべて</button>
+      <button type="button" data-filter="active">未完了</button>
+      <button type="button" data-filter="done">完了</button>
+    </div>
+
+    <!-- TODO一覧（中身は app.js が作る） -->
+    <ul id="todo-list"></ul>
+
+    <!-- 残りの件数 -->
+    <p id="todo-count"></p>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
