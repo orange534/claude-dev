@@ -1,0 +1,117 @@
+/*
+  todo-app/style.css の見た目を移したもの。
+  CSS Modules では、ここに書いたクラス名がこのページ専用になるので、
+  他のページのクラス名とぶつからない。
+*/
+
+/* 全体（globals.css のダークモード設定に関係なく、明るい配色にする） */
+.page {
+  flex: 1;
+  color-scheme: light;
+  padding: 40px 16px;
+  background: #f4f5f7;
+  font-family: system-ui, "Hiragino Sans", "Meiryo", sans-serif;
+  color: #222;
+}
+
+.container {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 24px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.title {
+  margin-bottom: 16px;
+  font-size: 1.5rem;
+}
+
+.loading {
+  color: #666;
+}
+
+/* ボタン共通 */
+.page button {
+  padding: 8px 14px;
+  font-size: 0.95rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* 入力フォーム */
+.form {
+  display: flex;
+  gap: 8px;
+}
+
+.input {
+  flex: 1;
+  min-width: 0;
+  padding: 10px;
+  font-size: 1rem;
+  color: #222;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.page .addButton {
+  background: #3b82f6;
+  color: #fff;
+}
+
+/* 絞り込みボタン */
+.filters {
+  display: flex;
+  gap: 8px;
+  margin: 16px 0;
+}
+
+.filters button {
+  background: #e5e7eb;
+  color: #222;
+}
+
+.filters button.active {
+  background: #3b82f6;
+  color: #fff;
+}
+
+/* TODO一覧 */
+.list {
+  list-style: none;
+}
+
+.list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 4px;
+  border-bottom: 1px solid #eee;
+}
+
+.text {
+  flex: 1;
+  overflow-wrap: anywhere;
+}
+
+/* 完了したTODO */
+.done .text {
+  text-decoration: line-through;
+  color: #999;
+}
+
+.page .deleteButton {
+  background: transparent;
+  color: #ef4444;
+}
+
+/* 残りの件数 */
+.count {
+  margin-top: 16px;
+  font-size: 0.9rem;
+  color: #666;
+}
